@@ -150,6 +150,7 @@ const array2 = [1, 3, 5, 7, 9];
 const array3 = [...array1, ...array2];
 
 console.log(array3);
+
 // Ejercicio 2
 // Operador Rest en Funciones: Crea una función 'suma' que utilice el operador rest para aceptar un número indeterminado de argumentos y devolver su suma.
 function adicion(...numeros) {
@@ -158,84 +159,53 @@ function adicion(...numeros) {
     return resultado;
 }
 console.log(adicion(1, 2, 3, 4, 5, 6));
-// Nivel 2 Ejercicio 3
-// Copiando objetos con Spread: Crea un objeto 'objeto1'. Luego crea un segundo objeto, 'objeto2', que sea una copia de 'objeto1' utilizando el operador spread. Cambia una propiedad de 'objeto2' y comprueba que 'objeto1' no ha cambiado.
 
+// Nivel 2 Ejercicio 3
+// Copiando objetos con Spread: Crea un objeto 'objeto1'. Luego crea un segundo objeto, 'objeto2', que sea una copia de 'objeto1' utilizando
+//  el operador spread. Cambia una propiedad de 'objeto2' y comprueba que 'objeto1' no ha cambiado.
+const objeto1 = {
+    nombre: "Mariela",
+    apellido: "Gonzales",
+    edad: 35
+}
+const objeto2 = { ...objeto1 }
+objeto2.edad = 37;
+console.log(objeto1);
+console.log(objeto2);
 // Ejercicio 4
-// Resto en Destructuring: Crea un array con varios elementos. Utiliza destructuring y el operador resto para asignar los primeros dos elementos a variables, y después asignar el resto de los elementos a una tercera variable.
+// Resto en Destructuring: Crea un array con varios elementos. Utiliza destructuring y el operador resto para asignar los primeros dos 
+// elementos a variables, y después asignar el resto de los elementos a una tercera variable.
+
+
+const lenguajes = ["PHP", "JS", "Java", "Python", "C++"];
+const [primerElem, segundoElem, ...otrosLenguajes] = lenguajes;
+
+console.log(lenguajes);
+console.log(primerElem);
+console.log(segundoElem);
+console.log(otrosLenguajes);
 
 // Nivel 3
 // Ejercicio 5
-// Spread en Funciones: Crea una función que acepte tres argumentos. Después, crea un array con tres elementos y llama a la función utilizando el operador spread con esa array.
+// Spread en Funciones: Crea una función que acepte tres argumentos. Después, crea un array con tres elementos y llama a la 
+// función utilizando el operador spread con esa array.
+
+function multiplicar(a, b, c) {
+    return a * b * c;
+}
+let numrs = [2, 4, 6];
+
+console.log(multiplicar(...numrs));
 
 // Ejercicio 6
-// Fusionando Objetos con Spread: Crea dos objetos con propiedades distintas. Utiliza el operador spread para fusionar estos dos objetos en uno nuevo.
+// Fusionando Objetos con Spread: Crea dos objetos con propiedades distintas. 
+// Utiliza el operador spread para fusionar estos dos objetos en uno nuevo.
 
+const infoPersonal = { nombre: "Mariela", apellido: "Gonzales" };
+const infoAuxiliar = { direccion: "Sants, Barcelona", cp: "08028", telf: 123456 };
+const persona = { ...infoPersonal, ...infoAuxiliar }
 
+console.log(infoPersonal);
+console.log(infoAuxiliar);
+console.log(persona);
 
-
-// Ejercicio 1.5: Array transformations
-// Nivel 1 Ejercicio 1
-// Map: Tiene un array de números [1, 2, 3, 4]. Crea un nuevo array que contenga el cuadrado de cada número.
-
-// Ejercicio 2
-// Filtero: Tiene un array de números [1, 2, 3, 4]. Crea un nuevo array que sólo contenga los números pares.
-
-// Ejercicio 3
-// Find: Tiene un array de números [1, 10 , 8, 11]. Use la función find para encontrar el primer número que es mayor a 10.
-
-// Ejercicio 4
-// Reducción: Tiene un array de números [13, 7, 8, 21]. Utiliza la función reduccion para calcular la suma total de los números.
-
-// Nivel 2 Ejercicio 5
-// Dado un array "[ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ]", crea una función en una sola línea que haga lo siguiente:
-// - Filtra los números mayores o iguales a 10.
-// - Multiplica cada número filtrado por 2.
-// - Calcula la suma de los números filtrados y multiplicados por 2.
-// - La función debe devolver el resultado de la suma.
-
-// Nivel 3 Ejercicio 6
-// Every / Some: Usa every y some para determinar si todos o algunos de los elementos del array [11, 12, 13, 14] son ​​mayores que 10, respectivamente
-
-
-
-// Ejercicio 1.6: Array loops
-// Nivel 1 Ejercicio 1
-// forEach: Tiene un array de nombres. Utiliza forEach para imprimir cada nombre en la consola: let nombres = ['Anna', 'Bernat', 'Clara'];
-
-// Ejercicio 2
-// for-of: Tiene un array de nombres. Utiliza un bucle for-of para imprimir cada nombre en la consola: let noms = ['Anna', 'Bernat', 'Clara'];
-
-// Ejercicio 3
-// filtro: Tiene un array de números. Use filtro para crear una nueva array que sólo contenga los números pares. let numeros = [1, 2, 3, 4, 5, 6];
-
-// Nivel 2 Ejercicio 4
-// for-in: Tiene un objeto con pares clave-valor: let obj = { nombre: Ola, edad: 25, ciudad: 'Barcelona' }; Use un bucle for-in para imprimir en la consola cada clave y su valor correspondiente.
-
-// Ejercicio 5
-// for-of con break: Tiene un array de números. Utiliza un bucle for-of para imprimir en la consola los números hasta encontrar el número 5, entonces detiene el bucle: let numeros = [1, 2, 3, 4, 5, 6];
-
-// Nivel 3 Ejercicio 6
-// for-of con index: Utiliza un bucle for-of para imprimir en la consola cada elemento del array y su posición (index): let noms = ['Anna', 'Bernat', 'Clara']
-
-
-
-
-// Ejercicio 1.7: Promisas & Async/Await
-// Nivel 1 Ejercicio 1
-// Creación de una Promesa: Crea una promesa que se resuelva después de 2 segundos y que devuelva la cadena de texto 'Hola, mundo'.
-
-// Ejercicio 2
-// Utilización de una Promesa: Utiliza la promesa creada en el ejercicio anterior. Crea un .then que imprima el resultado en la consola.
-
-// Ejercicio 3
-// Promesa con reject: Crea una promesa que se resuelva después de 2 segundos si el input es igual a 'Hola', y que la rechace si el input es cualquier otra cosa.
-
-// Ejercicio 4
-// Uso de async/await: Escribe una función asíncrona que utilice la función await para esperar el resultado de la promesa creada en el ejercicio 1, y que después imprima este resultado en la consola.
-
-// Nivel 2 Ejercicio 5
-// Gestión de errores con async/await: Modifica la función del ejercicio 4 para que capture cualquier posible error utilizando un blog try/catch.
-
-// Nivel 3 Ejercicio 6
-// Promise.all: Crea dos promesas que se resuelvan después de 2 y 3 segundos, respectivamente. Use Promise.all para esperar que ambas promesas se resuelvan, e imprime los resultados en la consola.

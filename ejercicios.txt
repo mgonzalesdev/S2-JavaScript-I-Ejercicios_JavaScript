@@ -58,14 +58,15 @@ Escribe una función procesarCadena que acepte dos parámetros: una cadena de ca
 
 
 
-// Ejercicio 1.4: Rest & Spread operators
-// Nivel 1 Ejercicio 1
-// Operador Spread en Arrays: Crea dos arrays, array1 y array2. Use el operador spread para crear una tercera array que contenga todos los elementos de array1 y array2.
 
-// Ejercicio 2
-// Operador Rest en Funciones: Crea una función 'suma' que utilice el operador rest para aceptar un número indeterminado de argumentos y devolver su suma.
+Ejercicio 1.4: Rest & Spread operators
+Nivel 1 Ejercicio 1
+Operador Spread en Arrays: Crea dos arrays, array1 y array2. Use el operador spread para crear una tercera array que contenga todos los elementos de array1 y array2.
 
-// Nivel 2 Ejercicio 3
+ Ejercicio 2
+ Operador Rest en Funciones: Crea una función 'suma' que utilice el operador rest para aceptar un número indeterminado de argumentos y devolver su suma.
+
+ Nivel 2 Ejercicio 3
 // Copiando objetos con Spread: Crea un objeto 'objeto1'. Luego crea un segundo objeto, 'objeto2', que sea una copia de 'objeto1' utilizando el operador spread. Cambia una propiedad de 'objeto2' y comprueba que 'objeto1' no ha cambiado.
 
 // Ejercicio 4
