@@ -209,3 +209,45 @@ console.log(infoPersonal);
 console.log(infoAuxiliar);
 console.log(persona);
 
+// Ejercicio 1.5: Array transformations
+// Nivel 1 Ejercicio 1
+// Map: Tiene un array de números [1, 2, 3, 4]. Crea un nuevo array que contenga el cuadrado de cada número.
+const arrayNum1 = [1, 2, 3, 4, 5, 6];
+const cuadrado = arrayNum1.map(numero => Math.pow(numero, 2));
+console.log(cuadrado);
+
+// Ejercicio 2
+// Filtero: Tiene un array de números [1, 2, 3, 4]. Crea un nuevo array que sólo contenga los números pares.
+const numerosPares = arrayNum1.filter(numero => numero % 2 === 0);
+console.log(numerosPares);
+
+// Ejercicio 3
+// Find: Tiene un array de números [1, 10 , 8, 11]. Use la función find para encontrar el primer número que es mayor a 10.
+let arrayNum3 = [1, 10, 8, 11];
+let mayor = arrayNum3.find((element) => element > 10);
+console.log(mayor);
+
+// Ejercicio 4
+// Reducción: Tiene un array de números [13, 7, 8, 21]. Utiliza la función reduccion para calcular la suma total de los números.
+let arrayNum4 = [13, 7, 8, 21];
+let sum = arrayNum4.reduce((accumulator, currentValue) => accumulator + currentValue)
+console.log(sum);
+
+// Nivel 2 Ejercicio 5
+// Dado un array "[ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ]", crea una función en una sola línea que haga lo siguiente:
+// - Filtra los números mayores o iguales a 10.
+// - Multiplica cada número filtrado por 2.
+// - Calcula la suma de los números filtrados y multiplicados por 2.
+// - La función debe devolver el resultado de la suma.
+let arrayNum5 = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
+let sum1 = arrayNum5.filter(numero => numero >= 10).map(numero => numero * 2).reduce((accumulator, currentValue) => accumulator + currentValue);
+console.log(sum1);
+
+// Nivel 3 Ejercicio 6
+// Every / Some: Usa every y some para determinar si todos o algunos de los elementos del array [11, 12, 13, 14] son ​​mayores que 10, respectivamente
+let arrayNum6 = [11, 12, 13, 14];
+let todosMayoresDiez = arrayNum6.every(numero => numero >= 10);
+
+let algunMayorDiez = arrayNum6.some(numero => numero >= 10);
+console.log(todosMayoresDiez);
+console.log(algunMayorDiez);
