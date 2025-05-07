@@ -148,7 +148,6 @@ procesarCadena("curso de programacion", mostrarFrase);
 const array1 = [2, 4, 6, 8, 10];
 const array2 = [1, 3, 5, 7, 9];
 const array3 = [...array1, ...array2];
-
 console.log(array3);
 
 // Ejercicio 2
@@ -175,8 +174,6 @@ console.log(objeto2);
 // Ejercicio 4
 // Resto en Destructuring: Crea un array con varios elementos. Utiliza destructuring y el operador resto para asignar los primeros dos 
 // elementos a variables, y después asignar el resto de los elementos a una tercera variable.
-
-
 const lenguajes = ["PHP", "JS", "Java", "Python", "C++"];
 const [primerElem, segundoElem, ...otrosLenguajes] = lenguajes;
 
@@ -194,7 +191,6 @@ function multiplicar(a, b, c) {
     return a * b * c;
 }
 let numrs = [2, 4, 6];
-
 console.log(multiplicar(...numrs));
 
 // Ejercicio 6
@@ -251,3 +247,46 @@ let todosMayoresDiez = arrayNum6.every(numero => numero >= 10);
 let algunMayorDiez = arrayNum6.some(numero => numero >= 10);
 console.log(todosMayoresDiez);
 console.log(algunMayorDiez);
+
+// Ejercicio 1.6: Array loops
+// Nivel 1 Ejercicio 1
+// forEach: Tiene un array de nombres. Utiliza forEach para imprimir cada nombre en la consola: let nombres = ['Anna', 'Bernat', 'Clara'];
+let nombres = ['Anna', 'Bernat', 'Clara'];
+nombres.forEach(nombre => console.log(nombre));
+
+// Ejercicio 2
+// for-of: Tiene un array de nombres. Utiliza un bucle for-of para imprimir cada nombre en la consola: let noms = ['Anna', 'Bernat', 'Clara'];
+let noms = ['Anna', 'Bernat', 'Clara'];
+for (const nom of noms) {
+    console.log(nom);
+}
+// Ejercicio 3
+// filtro: Tiene un array de números. Use filtro para crear una nueva array que sólo contenga los números pares. let numeros = [1, 2, 3, 4, 5, 6];
+let numerosEjercicio3 = [1, 2, 3, 4, 5, 6];
+let numPares = arrayNum1.filter(numero => numero % 2 === 0);
+
+
+// Nivel 2 Ejercicio 4
+// for-in: Tiene un objeto con pares clave-valor: let obj = { nombre: Ola, edad: 25, ciudad: 'Barcelona' }; Use un bucle for-in para imprimir en la consola cada clave y su valor correspondiente.
+let obj = { nombre: 'Ola', edad: 25, ciudad: 'Barcelona' }
+for (const key in obj) {
+    console.log("Clave: " + key + ", Valor: " + obj[key]);
+}
+
+// Ejercicio 5
+// for-of con break: Tiene un array de números. Utiliza un bucle for-of para imprimir en la consola los números hasta encontrar el número 5, 
+// entonces detiene el bucle: 
+let numerosEjercicio5 = [1, 2, 3, 4, 5, 6];
+for (const num of numerosEjercicio5) {
+    if (num === 5)
+        break;
+    console.log(num);
+}
+
+// Nivel 3 Ejercicio 6
+// for-of con index: Utiliza un bucle for-of para imprimir en la consola cada elemento del array y su posición (index): let noms = ['Anna', 'Bernat', 'Clara']
+let nomsEjercicio6 = ['Anna', 'Bernat', 'Clara'];
+for (const [index, value] of nomsEjercicio6.entries()) {
+    console.log("Indice:" + index + ", Valor: " + value);
+}
+
