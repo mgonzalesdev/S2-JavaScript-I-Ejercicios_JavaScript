@@ -357,7 +357,6 @@ async function saludar() {
 }
 saludar();
 
-
 // Nivel 2 Ejercicio 5
 // Gestión de errores con async/await: Modifica la función del ejercicio 4 para que capture cualquier posible error utilizando un blog try/catch.
 console.log("\n Promisas & Async/Await: Ejercicio 5");
