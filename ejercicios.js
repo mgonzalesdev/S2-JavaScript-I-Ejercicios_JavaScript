@@ -258,9 +258,9 @@ console.log(sum1);
 // Every / Some: Usa every y some para determinar si todos o algunos de los elementos del array [11, 12, 13, 14] son ​​mayores que 10, respectivamente
 console.log("\n Array transformations: Ejercicio 6");
 const arrayNum6 = [11, 12, 13, 14];
-let todosMayoresDiez = arrayNum6.every(numero => numero >= 10);
+let todosMayoresDiez = arrayNum6.every(numero => numero > 10);
 
-let algunMayorDiez = arrayNum6.some(numero => numero >= 10);
+let algunMayorDiez = arrayNum6.some(numero => numero > 10);
 console.log(todosMayoresDiez);
 console.log(algunMayorDiez);
 

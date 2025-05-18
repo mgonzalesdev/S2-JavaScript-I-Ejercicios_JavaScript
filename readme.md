@@ -1,5 +1,5 @@
 # Sprint 2.1: Ejercicios básicos JavaScript
-## 📄 Descripción 
+## Descripción 
 Este repositorio contiene una serie de ejercicios básicos en JavaScript, con el fin de familiarizarce, compreder y practicar.
 
 ## Contenido  
